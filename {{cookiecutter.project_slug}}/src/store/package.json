@@ -1,0 +1,9 @@
+{
+  "name": "@store",
+  "version": "1.0.0",
+  "description": "The `store/` directory contains all of your application's state. Inside the store, there are multiple custom directories. ",
+  "private": true,
+  "main": "index.js",
+  "files": ["*"],
+  "license": "ISC"
+}
