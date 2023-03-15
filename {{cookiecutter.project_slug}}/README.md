@@ -36,8 +36,6 @@
 
 ## Installation
 
-### Metro
-
 After cloning the repo, install the dependencies locally with [Yarn](https://yarnpkg.com/):
 
 ```sh
