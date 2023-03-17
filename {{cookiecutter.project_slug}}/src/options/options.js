@@ -1,7 +1,7 @@
 export const globalOptions = {
-  name: 'com.mercury',
-  url: 'https://com.mercury.co',
-  api: 'https://com.mercury.co/api/v1',
+  name: 'com.{{cookiecutter.project_slug}}',
+  url: 'https://com.{{cookiecutter.project_slug}}.co',
+  api: 'https://com.{{cookiecutter.project_slug}}.co/api/v1',
 };
 export const modulesOptions = {
   '@modules/app-menu': {
