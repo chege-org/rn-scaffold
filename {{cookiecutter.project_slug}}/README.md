@@ -88,12 +88,9 @@ track. Deploying will promote from beta to production.
 
 ### iOS
 
-CB developers must follow fastlane's [codesigning guide](https://codesigning.guide/) for using match.
-Match will automatically sign iOS builds.
+Developers must follow fastlane's [codesigning guide](https://codesigning.guide/) for using match.
 
-New CB developers should get access to the codesigning repo and run `bundle exec fastlane match development` from `ios/`.
-
-Not a CB developer? Create an [Apple developer](https://developer.apple.com)
+Not an Apple developer? Create an [Apple developer](https://developer.apple.com)
 and follow the instructions on [codesigning guide](https://codesigning.guide/)
 to setup your certificates.
 

@@ -1,22 +1,19 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 const path = require('path');
+const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+
 const extraNodeModules = {
   '@modules': path.resolve(__dirname, 'src/modules'),
   '@screens': path.resolve(__dirname, 'src/screens'),
   '@options': path.resolve(__dirname, 'src/options'),
 };
+
 const watchFolders = [
   path.resolve(__dirname, 'src/modules'),
   path.resolve(__dirname, 'src/screens'),
   path.resolve(__dirname, 'src/options'),
 ];
-module.exports = {
+
+const customConfig = {
   transformer: {
     getTransformOptions: async () => ({
       transform: {
@@ -38,3 +35,5 @@ module.exports = {
   watchFolders,
   resetCache: true,
 };
+
+module.exports = mergeConfig(getDefaultConfig(__dirname), customConfig);
