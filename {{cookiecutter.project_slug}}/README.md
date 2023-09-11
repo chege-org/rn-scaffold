@@ -97,9 +97,12 @@ Ensure you have **Cookiecutter** installed on your system. If it's missing, foll
 
 This scaffold offers a treasure trove for your React Native voyages, so you can brave the high seas of development with a seasoned crew and a sturdy ship. Sail forth, and may your codes be ever bug-free! 🏴‍☠️
 
-## Configuring Icomoon Fonts 🌙
 
-### **1. Using the `selection.json` on Icomoon App**:
+## Additional Configurations 🔧
+
+### Configuring Icomoon Fonts 🌙
+
+#### **1. Using the `selection.json` on Icomoon App**:
 
 - Head over to the [Icomoon app](https://icomoon.io/app/).
 
@@ -115,13 +118,13 @@ This scaffold offers a treasure trove for your React Native voyages, so you can 
 
 - Download the generated font pack.
 
-### **2. Integration in React Native**:
+#### **2. Integration in React Native**:
 
 - Extract the downloaded font pack.
 
 - Overwrite the existing `Icomoon.ttf` in `src/assets/fonts` with the new one from the font pack.
 
-### **iOS Configuration**:
+#### **iOS Configuration**:
 
 1. **Add Font to Xcode**:
 
@@ -134,7 +137,7 @@ This scaffold offers a treasure trove for your React Native voyages, so you can 
     - Go to the "Build Phases" tab and expand the "Copy Bundle Resources" section.
     - Ensure `Icomoon.ttf` is listed. If not, click the '+' and add it.
 
-### **Android Configuration**:
+#### **Android Configuration**:
 
 1. **Place the Font in Assets**:
 
@@ -144,7 +147,7 @@ This scaffold offers a treasure trove for your React Native voyages, so you can 
 
     - Although explicit configurations aren't necessary in the application itself (as React Native will auto-link fonts from `assets/fonts`), ensure the font family in your code matches the font file name without its extension, i.e., 'Icomoon'.
 
-### **Usage in React Native Components**:
+#### **Usage in React Native Components**:
 
 With the `CutomIcon.js` utility:
 
