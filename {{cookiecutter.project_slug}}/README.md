@@ -1,164 +1,113 @@
-# React Native Scaffold 🚀
+# {{cookiecutter.project_slug}}
 
-🌠 **What's Included?** 🌠
+## Table of Contents
 
-- 📁 **Organized Project Structure**: Streamline your development with an easy-to-navigate structure.
+1. [Project Description](#project-description)
+2. [Project Structure](#project-structure)
+3. [Modules](#modules)
+4. [Getting Started: Frontend](#getting-started-frontend)
+   - [Installation](#installation)
+   - [Running with Fastlane](#running-with-fastlane)
+      - [Android](#android-1)
+      - [iOS](#ios-1)
+      - [React Native Web](#react-native-web)
+5. [Getting Started: Backend](backend#readme)
 
-- 🛠️ **Code Formatting**:
-    - ESLint 🧐: Maintain consistent code quality.
-    - Prettier 🎨: Ensure consistent code formatting.
+## Project Description
 
-- 🌐 **React Navigation**: Set sail with a basic configuration to start building your app's navigation.
+{{cookiecutter.project_description}}
 
-- 🧪 **Testing**: Jest is onboard to help you validate every bit of your application.
+## Project Structure
 
-- 🌍 **React Native Web**: Seamlessly transition to the web with a preconfigured setup.
+    .
+    ├── ...
+    ├── android                 # Android native files
+    ├── ios                     # iOS native files
+    ├── public
+    ├── src
+        ├── modules
+        ├── options
+        ├── screens
+        ├── store               # Redux store
+    ├── ...
+    ├── README.md
+    └── ...
 
----
 
-🌳 **Project Folder Structure**:
+## Installation
 
-```
-├── android/               
-├── ios/                    
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-├── app.json
-├── babel.config.js
-├── config-overrides.js
-├── fileTransformer.js
-├── heroku.yml
-├── index.js
-├── jest.config.js
-├── jestSetup.js
-├── metro.config.js
-├── native.config.js
-├── package.json
-├── public/
-│   └── index.html
-├── src/
-│   ├── App.js
-│   ├── __tests__/
-│   │   └── App-test.tsx
-│   ├── assets/
-│   │   └── fonts/
-│   │       └── Icomoon.ttf
-│   ├── index.js
-│   ├── modules/
-│   │   ├── index.js
-│   │   ├── modules.js
-│   │   ├── package.json
-│   │   └── yourapp.js
-│   ├── options/
-│   │   ├── index.js
-│   │   └── options.js
-│   ├── screens/
-│   │   ├── index.js
-│   │   └── package.json
-│   ├── store/
-│   │   ├── README.md
-│   │   ├── custom/
-│   │   ├── index.js
-│   │   └── package.json
-│   └── utils/
-│       ├── CutomIcon.js
-│       ├── icons.js
-│       └── selection.json
-├── temp_directory/
-├── tsconfig.json
-└── yarn.lock
+After cloning the repo, install the dependencies locally with [Yarn](https://yarnpkg.com/):
+
+```sh
+yarn install
 ```
 
----
+### Android
 
-Before diving in, here are some prerequisites and steps to get started with this scaffold:
-
-## Prerequisites 📋
-
-Ensure you have **Cookiecutter** installed on your system. If it's missing, follow [this link](https://cookiecutter.readthedocs.io/en/latest/installation.html) to set sail.
-
-## Set Sail 🛫
-
-1. **Initiate the Project**:
-    - Open a terminal window on your local machine.
-    - Direct your compass to the directory where you wish to anchor your new React Native project.
-    - Execute the following incantation:
-      ```bash
-      cookiecutter gh:james-chege/rn-scaffold
-      ```
-    - Answer the siren calls and enter the name of your project. The scaffold will manifest a new React Native project for you.
-
-2. **Navigate Your Ship**:
-    - Once the map (scaffold) has finished charting out your journey, venture into the project's heart.
-    - Heed the scrolls found in `<project_name>/Readme` to embark on your new quest.
-
-## Setting Sun 🌅
-
-This scaffold offers a treasure trove for your React Native voyages, so you can brave the high seas of development with a seasoned crew and a sturdy ship. Sail forth, and may your codes be ever bug-free! 🏴‍☠️
-
-
-## Additional Configurations 🔧
-
-### Configuring Icomoon Fonts 🌙
-
-#### **1. Using the `selection.json` on Icomoon App**:
-
-- Head over to the [Icomoon app](https://icomoon.io/app/).
-
-- Click on the "Import Icons" button at the top-right corner.
-
-- Upload the `selection.json` file from `src/utils/` in your project. This will load the icons and selections from the file into the Icomoon app.
-
-- From here, you can:
-    - **Extend**: Add more icons to the selection by choosing from available libraries or uploading your own SVGs.
-    - **Modify**: Adjust existing icons if needed.
-
-- Once you've made your desired changes or additions, click on `Generate Font` at the bottom. This will produce an updated font pack with your icons.
-
-- Download the generated font pack.
-
-#### **2. Integration in React Native**:
-
-- Extract the downloaded font pack.
-
-- Overwrite the existing `Icomoon.ttf` in `src/assets/fonts` with the new one from the font pack.
-
-#### **iOS Configuration**:
-
-1. **Add Font to Xcode**:
-
-    - Open your iOS project in Xcode (usually located under `ios/[YourAppName].xcodeproj`).
-    - Drag and drop the `Icomoon.ttf` file (from `src/assets/fonts`) into the project navigator in Xcode.
-
-2. **Ensure Font is Included in the Build**:
-
-    - Select the project in the project navigator, then select the main target.
-    - Go to the "Build Phases" tab and expand the "Copy Bundle Resources" section.
-    - Ensure `Icomoon.ttf` is listed. If not, click the '+' and add it.
-
-#### **Android Configuration**:
-
-1. **Place the Font in Assets**:
-
-    - Copy the `Icomoon.ttf` file to `android/app/src/main/assets/fonts` (create the `fonts` directory if it doesn't exist).
-
-2. **Reference in Application**:
-
-    - Although explicit configurations aren't necessary in the application itself (as React Native will auto-link fonts from `assets/fonts`), ensure the font family in your code matches the font file name without its extension, i.e., 'Icomoon'.
-
-#### **Usage in React Native Components**:
-
-With the `CutomIcon.js` utility:
-
-Import the custom icon component in your React component:
-
-```javascript
-import CustomIcon from './src/utils/CutomIcon.js';
+```sh
+yarn android
 ```
 
-Use your custom icons:
+### iOS
 
-```javascript
-<CustomIcon name="my-icon" size={30} color="#900" />
+```sh
+npx pod-install
+yarn ios
+```
+
+### Setup react-native-vector-icons
+
+Follow instructions at their [README.md](https://github.com/oblador/react-native-vector-icons/blob/master/README.md#installation)
+
+## Running with Fastlane - I have not tested this yet
+
+[Fastlane](https://fastlane.tools/) makes testing, building, and deploying apps
+easier.
+
+Install fastlane globally (`npm i -g fastlane` or `yarn i -g fastlane`).
+Android and iOS dependencies are the same as React Native CLI.
+
+All fastlane commands are run from the platform directory. For example, Android
+commands must be run from `android/`. Fastlane should be executed using `bundle exec` to ensure dependencies are managed correctly.
+
+The commands for Android and iOS are the same:
+
+- Run tests: `bundle exec fastlane tests`
+- Local build: `bundle exec fastlane build`
+- Build and upload a beta (requires signing): `bundle exec fastlane beta`
+- Build or promote a release: `bundle exec fastlane deploy`
+
+### Android
+
+Publish an Android app you must first create an app in the Play Console and
+manually upload an APK. After the first upload run `bundle exec fastlane supply init` from `android/` to sync with the Play store. All future releases will be
+uploaded automatically.
+
+Android uses tracks. A beta release will build the app and upload to the beta
+track. Deploying will promote from beta to production.
+
+### iOS
+
+Developers must follow fastlane's [codesigning guide](https://codesigning.guide/) for using match.
+
+Not an Apple developer? Create an [Apple developer](https://developer.apple.com)
+and follow the instructions on [codesigning guide](https://codesigning.guide/)
+to setup your certificates.
+
+## React Native Web
+
+You can build and deploy your React Native app in the web too!
+
+To get started run:
+
+```sh
+yarn run web:start
+```
+
+This will start a local development server so that you can iterate and preview your changes. Visit it at [localhost:8080](http://localhost:8080).
+
+To build the web version of the project you can run:
+
+```sh
+yarn run web:build
 ```
