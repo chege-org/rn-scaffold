@@ -1,5 +1,5 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['module:@react-native/babel-preset'],
   plugins: [
     [
       'module:react-native-dotenv',
@@ -14,6 +14,6 @@ module.exports = {
     ],
     'import-glob-meta',
     '@babel/plugin-proposal-export-namespace-from',
-    'react-native-reanimated/plugin',
+    'react-native-reanimated/plugin', // react-native-reanimated/plugin has to be listed last.
   ],
 };

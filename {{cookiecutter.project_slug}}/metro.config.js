@@ -5,12 +5,14 @@ const extraNodeModules = {
   '@modules': path.resolve(__dirname, 'src/modules'),
   '@screens': path.resolve(__dirname, 'src/screens'),
   '@options': path.resolve(__dirname, 'src/options'),
+  '@store': path.resolve(__dirname, 'src/store'),
 };
 
 const watchFolders = [
   path.resolve(__dirname, 'src/modules'),
   path.resolve(__dirname, 'src/screens'),
   path.resolve(__dirname, 'src/options'),
+  path.resolve(__dirname, 'src/store'),
 ];
 
 const customConfig = {
