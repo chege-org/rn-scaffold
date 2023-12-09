@@ -2,17 +2,17 @@
 
 ## Included Features
 
-- **Organized Project Structure** 💼: A structured directory for more streamlined development.
+- **Organized Project Structure**: A structured directory for more streamlined development.
 
-- **Code Formatting** 📖:
+- **Code Formatting**:
     - ESLint: Ensures consistent code quality.
     - Prettier: Provides uniform code formatting.
 
-- **React Navigation** 🌐: A basic configuration to commence the development of your application's navigation.
+- **React Navigation**: A basic configuration to commence the development of your application's navigation.
 
-- **Testing** 🧪: Jest integration for comprehensive application testing.
+- **Testing**: Jest integration for comprehensive application testing.
 
-- **React Native Web** 🖥️: Transition to web development with an already configured setup.
+- **React Native Web**: Transition to web development with an already configured setup.
 
 ---
 
@@ -20,66 +20,36 @@
 ```
 ├── android/               
 ├── ios/                    
-├── Gemfile
-├── Gemfile.lock
 ├── README.md
 ├── app.json
-├── babel.config.js
-├── config-overrides.js
-├── fileTransformer.js
-├── heroku.yml
-├── index.js
-├── jest.config.js
-├── jestSetup.js
-├── metro.config.js
-├── native.config.js
 ├── package.json
 ├── public/
-│   └── index.html
+│   └── index.html
 ├── src/
-│   ├── App.js
-│   ├── __tests__/
-│   │   └── App-test.tsx
-│   ├── assets/
-│   │   └── fonts/
-│   │       └── Icomoon.ttf
-│   ├── index.js
-│   ├── modules/
-│   │   ├── index.js
-│   │   ├── modules.js
-│   │   ├── package.json
-│   │   └── yourapp.js
-│   ├── options/
-│   │   ├── index.js
-│   │   └── options.js
-│   ├── screens/
-│   │   ├── index.js
-│   │   └── package.json
-│   ├── store/
-│   │   ├── README.md
-│   │   ├── custom/
-│   │   ├── index.js
-│   │   └── package.json
-│   └── utils/
-│       ├── CutomIcon.js
-│       ├── icons.js
-│       └── selection.json
-├── temp_directory/
-├── tsconfig.json
+│   ├── App.js
+│   ├── index.js
+│   ├── __tests__/
+│   ├── assets/
+│   ├── modules/
+│   ├── options/
+│   ├── screens/
+│   ├── store/
+│   └── utils/
 └── yarn.lock
+
 ```
 
 ---
 
 ## Getting Started
 
-### Prerequisites 🔍
+### Prerequisites
 
 Ensure "Cookiecutter" is installed on your system. If not available, please install using [this link](https://cookiecutter.readthedocs.io/en/latest/installation.html).
 
 ### Initial Setup
 
-1. **Initiating the Project** ⚙️:
+1. **Initiating the Project**:
     - Open a terminal on your local system.
     - Navigate to the directory where you want to create your new React Native project.
     - Run the following command:
@@ -88,7 +58,7 @@ Ensure "Cookiecutter" is installed on your system. If not available, please inst
       ```
     - Provide the necessary inputs, including your project name.
 
-2. **Accessing Your Project** 📁:
+2. **Accessing Your Project**:
     - Once the setup completes, navigate to the project directory.
     - Refer to the instructions in `<project_name>/Readme` for further guidance.
 
@@ -96,9 +66,9 @@ Ensure "Cookiecutter" is installed on your system. If not available, please inst
 
 This scaffold provides a foundational structure for your React Native projects, aiming to enhance your development efficiency.
 
-## Additional Configurations 🔧
+## Additional Configurations 
 
-### Configuring Icomoon Fonts 🌙
+### **Icomoon Integration 🌔**
 
 #### **1. Using the `selection.json` with Icomoon App**:
 
@@ -109,26 +79,19 @@ This scaffold provides a foundational structure for your React Native projects, 
 - Click `Generate Font` to update the font pack.
 - Download the updated font pack.
 
-#### **2. Integration into React Native**:
+#### **2. Updating the Font**:
 
 - Extract the downloaded font pack.
 - Replace the `Icomoon.ttf` in `src/assets/fonts` with the new file.
+- Update the `selection.json` file in `src/utils` with the new file.
 
 #### **iOS Configuration**:
-
-1. **Add Font to Xcode**:
-    - Open your iOS project in Xcode.
-    - Drag and drop the `Icomoon.ttf` (from `src/assets/fonts`) into the project navigator in Xcode.
-
-2. **Include Font in the Build**:
-    - Select the project in the navigator, then the main target.
-    - Navigate to the "Build Phases" tab and expand "Copy Bundle Resources".
-    - Ensure `Icomoon.ttf` is listed. If not, add it.
+- Re-build the project to update the font.
 
 #### **Android Configuration**:
 
 1. **Place Font in Assets**:
-    - Move the `Icomoon.ttf` file to `android/app/src/main/assets/fonts`. Create the `fonts` directory if necessary.
+    - Replace the `Icomoon.ttf` in `android/app/src/main/assets/fonts` with the new file. If the `fonts` directory does not exist, create it.
 
 2. **Reference in Application**:
     - Ensure the font family in your code corresponds to the font file name, excluding its extension, specifically 'Icomoon'.
