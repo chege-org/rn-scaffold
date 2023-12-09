@@ -4,13 +4,16 @@
 
 - **Organized Project Structure**: A structured directory for more streamlined development.
 
+- **[React Navigation](https://reactnavigation.org/docs/getting-started/)**: A basic configuration to commence the development of your application's navigation.
+
+- **Redux Integration with [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)**: A basic configuration to commence the development of your application's state management.
+
 - **Code Formatting**:
-    - ESLint: Ensures consistent code quality.
-    - Prettier: Provides uniform code formatting.
+    - [ESLint](https://eslint.org/docs/latest/use/getting-started): Ensures consistent code quality.
+    - [Prettier](https://prettier.io/docs/en/): Provides uniform code formatting.
 
-- **React Navigation**: A basic configuration to commence the development of your application's navigation.
 
-- **Testing**: Jest integration for comprehensive application testing.
+- **Testing**: [Jest](https://jestjs.io/docs/getting-started) integration for comprehensive application testing.
 
 - **React Native Web**: Transition to web development with an already configured setup.
 

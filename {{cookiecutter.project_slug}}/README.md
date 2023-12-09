@@ -4,15 +4,12 @@
 
 1. [Project Description](#project-description)
 2. [Project Structure](#project-structure)
-3. [Modules](#modules)
-4. [Getting Started: Frontend](#getting-started-frontend)
-   - [Installation](#installation)
-   - [Running with Fastlane](#running-with-fastlane)
-      - [Android](#android-1)
-      - [iOS](#ios-1)
-      - [React Native Web](#react-native-web)
-5. [Getting Started: Backend](backend#readme)
-
+3. [Install Dependencies](#install-dependencies)
+4. [Getting Started](#getting-started)
+   - [Android](#android)
+   - [iOS](#ios)
+   - [Web](#web)
+   
 ## Project Description
 
 {{cookiecutter.project_description}}
@@ -33,14 +30,20 @@
     ├── README.md
     └── ...
 
+## Getting Started
 
-## Installation
+Clone the repo and install the dependencies locally:
 
-After cloning the repo, install the dependencies locally with [Yarn](https://yarnpkg.com/):
-
+### Install Dependencies
 ```sh
-yarn install
+yarn install 
 ```
+or
+```sh
+npm install --legacy-peer-deps
+```
+
+### Start the App
 
 ### Android
 
@@ -55,7 +58,7 @@ npx pod-install
 yarn ios
 ```
 
-## React Native Web
+### Web
 
 You can build and deploy your React Native app in the web too!
 
@@ -71,4 +74,16 @@ To build the web version of the project you can run:
 
 ```sh
 yarn run web:build
+```
+
+### Testing
+
+[Jest](https://jestjs.io/docs/getting-started) is integrated for comprehensive application testing.
+- To run the tests, run the following command:
+```sh
+yarn test
+```
+or
+```sh
+npm run test
 ```
