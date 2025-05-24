@@ -1,5 +1,5 @@
 import {AppRegistry} from 'react-native';
-import App from './App';
+import App from '../App';
 import './utils/icons';
 
 const appName = '{{cookiecutter.project_slug}}';

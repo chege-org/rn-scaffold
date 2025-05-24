@@ -1,0 +1,15 @@
+node_modules/
+.yarn/
+ios/Pods/
+android/build/
+android/app/build/
+*.lock
+yarn.lock
+Gemfile.lock
+Podfile.lock
+.DS_Store
+.idea/
+build/
+dist/
+.git/
+.bundle/ 
